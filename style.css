@@ -1,0 +1,134 @@
+body {
+  background-color: #ffe992;
+  font-family: "Rubik", sans-serif;
+}
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  gap: 40px;
+}
+.sonke-img-lg {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 0px;
+  margin-top: 10px;
+}
+.sonke-info {
+  text-align: center;
+}
+@keyframes sonkeBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+.sonke-pp {
+  height: 130px;
+  margin-bottom: 0px;
+  animation: sonkeBounce 2.5s infinite;
+}
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.93);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.sonke-img-lg.shrink-anim,
+.social-btns.shrink-anim {
+  animation: shrink 0.4s;
+}
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+.presale-address {
+  font-size: 1.1rem;
+  word-break: break-all;
+}
+.copy-btn {
+  background: #ffe992;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.social-btns {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.social-btns a {
+  display: inline-block;
+  border-radius: 8px;
+}
+.social-btns img {
+  height: 32px;
+  width: 32px;
+}
+@keyframes marquee-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50vw);
+  }
+}
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  margin: 48px 0 0 0;
+  flex-wrap: nowrap;
+  padding-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+}
+.partners img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  animation-name: marquee-to-left;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.sonke-img-lg.zoom-anim {
+  animation: zoomInOut 0.5s;
+}
+@media (max-width: 900px) {
+  .main-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .partners {
+    gap: 18px;
+  }
+}
